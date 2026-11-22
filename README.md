@@ -40,5 +40,5 @@ Or connect this GitHub repo in Netlify with the build command empty and the publ
 ## Editing
 
 - Phone and WhatsApp number: search `9217295528` in `index.html` and `script.js`.
-- Add a support email: put a `mailto:` row in the contact `<dl class="details">` and an `email` field in the structured data block at the top of `index.html`.
+- Support email: search `forticam.support@gmail.com` in `index.html` and `404.html` (contact details, footer, FAQ, both structured data blocks and the 404 page).
 - FAQ answers appear twice, in the visible FAQ section and in the FAQPage structured data. Change both together.
