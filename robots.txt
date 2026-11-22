@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://forticam.cctv.in/sitemap.xml
