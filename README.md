@@ -1,20 +1,20 @@
-# Forticam CCTV – forticam.cctv.in
+# Forticam – forticam.cctv.in
 
-CCTV-focused website for **Forticam**: dome, bullet, PTZ and Wi-Fi cameras, DVR/NVR recorders and video door phones for homes, offices and companies in Faridabad and Gurgaon. Smart Surveillance, Smarter Protection For A Safer Spaces.
+Website for **Forticam**: CCTV cameras, DVR/NVR recorders and video door phones for homes, offices and companies in Faridabad and Gurgaon, since 2009. Smart Surveillance, Smarter Protection For A Safer Spaces.
 
-Plain HTML, CSS and JavaScript. No build step, no dependencies. It shares its brand, photos and styling with the main site, [forticam.in](https://forticam.in/) (repo `Forticam/forticam.in`).
+Plain HTML, CSS and JavaScript. No build step, no dependencies, no paid hosting needed.
 
 ## Files
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The page: hero, cameras, which camera where, installation steps, gallery, FAQ, contact |
-| `styles.css` | All styling |
-| `script.js` | Photo lightbox and the consultation form (opens WhatsApp with the details filled in) |
+| `index.html` | The page: hero, why Forticam, cameras, which camera where, installation steps, gallery, FAQ, contact |
+| `styles.css` | All styling, including scaling for 4K screens |
+| `script.js` | Photo viewer, scroll animations, and the consultation form (opens WhatsApp with the details filled in) |
+| `sw.js` | Small cache so repeat visits load instantly |
 | `images/`, `logo.png` | Photos and logo |
-| `netlify.toml` | Hosting settings: security headers, caching, `www` redirect |
-| `robots.txt`, `sitemap.xml`, `404.html` | SEO and error page |
-| `Src, Public - View 1.tsv.csv` | Project board export (not part of the site) |
+| `404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Error page, SEO files, and a switch that tells GitHub Pages to serve the files as they are |
+| `DEPLOY.md` | Step by step: publish for free on GitHub Pages |
 
 ## Run it locally
 
@@ -23,22 +23,10 @@ python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
-## Publish
+## Publish for free
 
-**Netlify (recommended)**
+See [DEPLOY.md](DEPLOY.md). Short version: Settings, Pages, Deploy from a branch, `main`, `/ (root)`, Save.
 
-```bash
-npm install -g netlify-cli
-netlify login
-netlify deploy --prod --dir=.
-```
+## Changing photos
 
-Or connect this GitHub repo in Netlify with the build command empty and the publish directory set to `.`, then add `forticam.cctv.in` under Domain management. Every push to `main` then deploys automatically.
-
-**GitHub Pages**: Settings, Pages, deploy from `main` and `/ (root)`, then set the custom domain to `forticam.cctv.in`.
-
-## Editing
-
-- Phone and WhatsApp number: search `9217295528` in `index.html` and `script.js`.
-- Support email: search `forticam.support@gmail.com` in `index.html` and `404.html` (contact details, footer, FAQ, both structured data blocks and the 404 page).
-- FAQ answers appear twice, in the visible FAQ section and in the FAQPage structured data. Change both together.
+Put your own photo in `images/` with the same file name (for example `images/setup-handover.jpg`). The page picks it up with no code change. Use photos at least 1920 pixels wide so they stay sharp on 4K screens.
